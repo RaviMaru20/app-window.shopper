@@ -10,6 +10,7 @@ import UIKit
 
 class MainVC: UIViewController {
 
+    @IBOutlet weak var GreetingsLbl: UILabel!
     @IBOutlet weak var ItemPriceTxt: TextField!
     @IBOutlet weak var HourlyWageTxt: TextField!
     
@@ -19,7 +20,7 @@ class MainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        GreetingsLbl.isHidden = true
         resultLbl.isHidden = true
         HoursLbl.isHidden = true
         
@@ -41,6 +42,16 @@ class MainVC: UIViewController {
                 resultLbl.isHidden = false
                 HoursLbl.isHidden = false
                 resultLbl.text = "\(wage.HoursLogic(forwage: wageNumber, forprice: itemPriceNumber))"
+                let hours = wage.HoursLogic(forwage: wageNumber, forprice: itemPriceNumber)
+                if hours >= 100 {
+                    GreetingsLbl.text = "Nothing is Easy. But, NEVER GIVE UP!!"
+                    GreetingsLbl.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                    GreetingsLbl.textAlignment = .center
+                    
+                    GreetingsLbl.isHidden = false
+                    
+
+                }
                 
             }
         }
@@ -49,7 +60,8 @@ class MainVC: UIViewController {
     
     
     @IBAction func ClearAllBtnPressed(_ sender: Any) {
-       HoursLbl.isHidden = true
+        GreetingsLbl.isHidden = true
+        HoursLbl.isHidden = true
         resultLbl.isHidden = true
         HourlyWageTxt.text = ""
         ItemPriceTxt.text = ""

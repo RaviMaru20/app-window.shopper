@@ -83,6 +83,15 @@
                                     <action selector="ClearAllBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwh-Wq-gKV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHp-cE-UGD">
+                                <rect key="frame" x="70" y="449" width="235" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="kfJ-Xi-tAs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -96,6 +105,8 @@
                             <constraint firstItem="K2m-wI-dLD" firstAttribute="top" secondItem="Pfi-bh-WgY" secondAttribute="bottom" constant="203" id="AYB-Oo-b5d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K2m-wI-dLD" secondAttribute="trailing" constant="16" id="Enx-7i-02d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K2m-wI-dLD" secondAttribute="bottom" constant="20" id="GjE-fS-j0D"/>
+                            <constraint firstItem="EHp-cE-UGD" firstAttribute="top" secondItem="Pfi-bh-WgY" secondAttribute="bottom" constant="35" id="J1R-MM-VCy"/>
+                            <constraint firstItem="EHp-cE-UGD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LlL-oA-LDM"/>
                             <constraint firstItem="kRW-z0-dIR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="M6f-h8-udz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kRW-z0-dIR" secondAttribute="trailing" constant="70" id="Ql4-4W-sG3"/>
                             <constraint firstItem="wSj-V5-Pcc" firstAttribute="trailing" secondItem="kRW-z0-dIR" secondAttribute="trailing" id="Uae-pC-MPB"/>
@@ -105,6 +116,7 @@
                             <constraint firstItem="K2m-wI-dLD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNy-B1-xAX"/>
                             <constraint firstItem="Pfi-bh-WgY" firstAttribute="top" secondItem="gbe-vq-yVZ" secondAttribute="bottom" id="pbs-TF-BeW"/>
                             <constraint firstItem="K2m-wI-dLD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="q0x-TY-Ec0"/>
+                            <constraint firstItem="EHp-cE-UGD" firstAttribute="width" secondItem="wSj-V5-Pcc" secondAttribute="width" id="s25-9r-5WG"/>
                             <constraint firstItem="gbe-vq-yVZ" firstAttribute="top" secondItem="wSj-V5-Pcc" secondAttribute="bottom" constant="30" id="t5b-n3-Im2"/>
                             <constraint firstItem="beu-8y-zHZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vuV-29-kxz"/>
                             <constraint firstItem="OSc-NI-2gB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="w7X-6b-wqJ"/>
@@ -114,6 +126,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="GreetingsLbl" destination="EHp-cE-UGD" id="xFG-uh-3wo"/>
                         <outlet property="HourlyWageTxt" destination="kRW-z0-dIR" id="SaX-pk-2lr"/>
                         <outlet property="HoursLbl" destination="Pfi-bh-WgY" id="vuf-Ft-RZ9"/>
                         <outlet property="ItemPriceTxt" destination="wSj-V5-Pcc" id="qEg-hL-GWs"/>
